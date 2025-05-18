@@ -1,0 +1,624 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    /* box-sizing: border-box; */
+}
+.returnA{
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 75px;
+    margin-right: 10px;
+    float: right;
+}
+.returnF{
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 75px;
+    margin-right: 10px;
+    float: right;
+}
+.returnM{
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 75px;
+    margin-right: 10px;
+    float: right;
+}
+.logout{
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 75px;
+    margin-right: 10px;
+    float: right;
+}
+.top{
+    width: 100%;
+    display: flex;
+    width: 100%;
+    height: 75px;
+    background-color: pink;
+    margin:0 auto;
+    text-align: center;
+}
+.top_textLogin{
+    margin: auto;
+    font-weight: bold;
+    font-size: 30px;
+}
+.top_text{
+    position: relative;
+    right: -70px;
+    margin: auto;
+    font-weight: bold;
+    font-size: 30px;
+}
+.two{
+    display: grid;    /*创建网格布局*/
+    grid-template-columns: 230px 1fr; /* 两列：固定210px和剩余空间 */
+    height: 100vh;
+}
+/* 固定左侧菜单栏 */
+.menu {
+    position: fixed; /* 菜单栏固定 */
+    top: 75px;
+    left: 0;
+    width: 230px;
+    height: calc(100vh - 75px);
+    /* background-color: #555; */
+    text-align: center;
+}
+.main {
+    grid-column: 2;
+    margin-top: 75px; /* 避开顶部栏 */
+    padding: 20px;
+    /* background-color: #4aa0ec; */
+}
+
+input{
+    width: 200px;
+    height: 30px;
+}
+.logininput{
+    width: 350px;
+    height: 80px;
+    /* background-color: violet; */
+    margin: 0 auto;
+    margin-bottom: 30px;
+    padding-right: 50px;
+    color: black;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: right;
+}
+.logininput>p{
+    margin:auto;
+    width: 355px;
+    height: 40px;
+    margin-bottom: 10px;
+    /* background-color: #f79420; */
+    text-align: right;
+}
+.logininput1{
+    width: 350px;
+    height: 80px;
+    /* background-color: violet; */
+    margin: 0 auto;
+    margin-bottom: 30px;
+    padding-right: 50px;
+    color: black;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: right;
+}
+.logininput1>p{
+    margin:auto;
+    width: 260px;
+    height: 40px;
+    margin-bottom: 10px;
+    /* background-color: #f79420; */
+    text-align: right;
+}
+.logininput-activity{
+    width: 350px;
+    height: 80px;
+    /* background-color: violet; */
+    margin: 0 auto;
+    margin-bottom: 30px;
+    padding-right: 250px;
+    color: black;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: right;
+}
+.logininput-activity>p{
+    margin:auto;
+    width: 335px;
+    height: 40px;
+    margin-bottom: 10px;
+    /* background-color: #f79420; */
+    text-align: right;
+}
+.alertInfo{
+    color:pink;
+    width: 600px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    margin:0 auto;
+}
+.login{
+    position: relative;
+    top: 50px;
+    width: 400px;
+    height: 50px;
+    /* background-color: peru; */
+    margin:0 auto;
+    text-align: center;
+}
+.loginButton {
+     /* margin-left: 100px; */
+    margin-top: 30px; 
+    background-color: pink;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+}
+.loginButton:hover {
+    opacity: 0.8;
+}
+.loginButton-activity {
+    margin-top: 30px;
+    background-color: pink;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+}
+.loginButton-activity:hover {
+    opacity: 0.8;
+}
+
+li{
+    height: 70px;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #c396b4;
+    margin: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* 表格 */
+.table {
+    width: calc(100% - 210px); /* 设置表格宽度为父容器的 100% 减去菜单宽度 */
+    max-width: 1080px; /* 设置表格最大宽度 */
+    margin-left: 100px; 
+    table-layout: fixed; /* 固定表格布局，防止内容撑开列宽 */
+    overflow-x: auto; /* 当表格宽度超过容器时，显示水平滚动条 */
+}
+
+.table tr,
+.table th,
+.table td {
+    white-space: nowrap; /* 防止单元格内容换行 */
+    overflow: hidden; /* 隐藏溢出的内容 */
+    text-overflow: ellipsis; /* 当内容溢出时，显示省略号 */
+    text-align: center; /* 内容水平居中 */
+    vertical-align: middle; /* 内容垂直居中 */
+}
+
+.thead{
+    height: 40px;
+    background-color: pink;
+}
+
+.tdcolor{
+    height: 40px;
+    background-color: rgb(255, 215, 247);
+}
+.table1 {
+    /* background-color: #4ecdc4; */
+    width: calc(100% - 210px); /* 设置表格宽度为父容器的 100% 减去菜单宽度 */
+    max-width: 1080px; /* 设置表格最大宽度 */
+    margin-left: 100px; 
+    table-layout: fixed; /* 固定表格布局，防止内容撑开列宽 */
+    overflow-x: auto; /* 当表格宽度超过容器时，显示水平滚动条 */
+}
+.table1 tr,
+.table1 th,
+.table1 td {
+    white-space: nowrap; /* 防止单元格内容换行 */
+    overflow: hidden; /* 隐藏溢出的内容 */
+    text-overflow: ellipsis; /* 当内容溢出时，显示省略号 */
+    text-align: center; /* 内容水平居中 */
+    vertical-align: middle; /* 内容垂直居中 */
+}
+
+.thead1{
+    height: 40px;
+    background-color: pink;
+}
+
+.tdcolor1{
+    height: 40px;
+    background-color: rgb(255, 215, 247);
+}
+/* 操作栏按钮样式 */
+.table1 td:last-child {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 8px;
+}
+
+.signup-btn, .summary-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.signup-btn {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+.summary-btn {
+    background-color: #4ecdc4;
+    color: white;
+}
+
+.signup-btn:hover, .summary-btn:hover {
+    opacity: 0.8;
+}
+
+.thead2{
+    height: 40px;
+    background-color: pink;
+}
+
+.tdcolor2{
+    height: 40px;
+    background-color: rgb(255, 215, 247);
+}
+
+.table3 {
+    width: calc(100% - 210px); /* 设置表格宽度为父容器的 100% 减去菜单宽度 */
+    max-width: 1080px; /* 设置表格最大宽度 */
+    margin-left: 250px; /* 设置左边距为菜单宽度，增加40px间距 */
+    table-layout: fixed; /* 固定表格布局，防止内容撑开列宽 */
+    overflow-x: auto; /* 当表格宽度超过容器时，显示水平滚动条 */
+}
+.table3 tr,
+.table3 th,
+.table3 td {
+    white-space: nowrap; /* 防止单元格内容换行 */
+    overflow: hidden; /* 隐藏溢出的内容 */
+    text-overflow: ellipsis; /* 当内容溢出时，显示省略号 */
+    text-align: center; /* 内容水平居中 */
+    vertical-align: middle; /* 内容垂直居中 */
+}
+
+.thead3{
+    height: 40px;
+    background-color: pink;
+}
+
+.tdcolor3{
+    height: 40px;
+    background-color: rgb(255, 215, 247);
+}
+
+
+.sum{
+    color: pink;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: 100px;
+}
+/* 顶部搜索栏 */
+.searchlist{
+    align-items: center;
+    position: absolute;
+    right: 0px;
+    top: 80px;
+    height: 80px;
+    width: calc(100% - 170px);;
+    display: flex;
+    justify-content:center;
+    font-size: 14px;
+    /* background-color: aqua; */
+}
+.searchlist p{
+    line-height: 30px
+}
+/* 下拉框 */
+.dropdown{
+    width: 90px;
+    height: 80px;
+    margin: 10px;    
+}
+/* 按钮 */
+.searchBtn, .addBtn,.btn_publish{
+    font-size: 15px;
+    margin-left: 10px;
+    width: 60px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.searchBtn ,.btn_publish{
+    background-color: #ff628a;
+    color: white;
+}
+
+.addBtn {
+    background-color: #52b4ff;
+    color: white;
+}
+
+.searchBtn:hover, .addBtn:hover ,.btn_publish:hover{
+    opacity: 0.8;
+}
+
+.searchlist1{
+    align-items: center;
+    position: absolute;
+    right: 0px;
+    top: 80px;
+    height: 80px;
+    width: calc(100% - 170px);;
+    display: flex;
+    justify-content:center;
+    font-size: 14px;
+    /* background-color: aqua; */
+}
+
+/* 活动详情页面 */
+.deyail_text{
+    position: relative;
+    margin: auto;
+    font-weight: bold;
+    font-size: 30px;
+    right: -70px;
+}
+.detail-grid {
+    /* background-color:antiquewhite; */
+    margin-right: 250px;
+    display: grid;    /*创建网格布局*/
+    grid-template-columns: 250px 1fr; /* 两列：固定150px和剩余空间 */
+    gap: 15px; /* 行和列间距 */
+    margin-bottom: 20px;
+}
+.detail-label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #555;
+    text-align: right;
+}
+.detail-value {
+    padding: 10px;
+    background: #f8ebf3;
+    border-radius: 4px;
+}
+textarea {
+    width: 97%;
+    min-height: 150px;
+    padding: 10px;
+    border-radius: 10px;
+    resize: vertical; /*允许垂直缩放控制*/
+    font-family: inherit;
+}
+.button-group {
+    margin-top: 30px;
+    text-align: center;
+}
+#save-summary, .back-btn {
+    padding: 10px 20px;
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 10px;
+}
+.back-btn {
+    display: inline-block;
+    text-decoration: none;
+    background: #4ecdc4;
+    font-weight: inherit; /* 继承父元素字体粗细 */
+}
+button:hover, .back-btn:hover {
+    opacity: 0.9;
+    /*悬停状态（hover）：按钮轻微变透明*/
+}
+
+/* 收支表单样式 */
+.financebox{
+    width: 260px;
+    /* background-color: #c396b4; */
+    /* margin: auto; */
+    position: relative;
+    left: 34%;
+    padding-right: 200px;
+}
+.form-group{
+    display: flex;
+    justify-content: space-around;
+    width: 390px;
+    height: 70px;
+    /* background-color: violet; */
+    /* padding-right: 50px; */
+    color: black;
+    font-size: 16px;
+    text-align: right;
+}
+.form-group>label{
+    margin-top: 20px;
+    font-size: 20px;
+    width: 140px;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 10px;
+    /* background-color: #f79420; */
+    text-align: right;
+}
+.form-group>input,select{
+    float: right;
+    margin:auto;
+    width: 200px;
+    height: 25px;
+    margin-bottom: 10px;
+    /* background-color: #8b7a66; */
+    text-align: left;
+}
+
+.form-control {
+    padding: 8px;
+    width: 200px;
+    height: 35px;
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.submit-btn {
+    margin-top: 40px;
+    margin-left: 165px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: pink;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+}
+
+.submit-btn:hover {
+    opacity: 0.8;
+}
+
+/* 录入社团信息 */
+.enterCIbox{
+    width: 260px;
+    /* background-color: #c396b4; */
+    /* margin: auto; */
+    position: relative;
+    left: 35%;
+    padding-right: 200px;
+}
+
+/* 发布活动 */
+.activitybox{
+    width: 260px;
+    /* background-color: #c396b4; */
+    /* margin: auto; */
+    position: relative;
+    left: 34%;
+    padding-right: 200px;
+}
+
+/* 添加新成员 */
+.memberbox{
+    width: 260px;
+    /* background-color: #c396b4; */
+    /* margin: auto; */
+    position: relative;
+    left: 34%;
+    padding-right: 200px;
+}
+
+/* 分页样式 */
+.pagination-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: #007bff; */
+    width: 900px;
+    height: 40px;
+    /* margin-top: 20px; */
+    margin: auto;
+    padding-top: 15px;
+}
+
+.pagination-controls {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.page-btn {
+    width: 60px;
+    height: 30px;
+    /* padding: 5px 10px; */
+    border: 1px solid #ddd;
+    background-color: #f6b4b4;;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+}
+
+.page-btn:disabled {
+    color: white;
+    cursor: not-allowed;
+}
+
+.page-numbers {
+    margin: 0 10px;
+}
+
+.page-numbers .page-number {
+    padding: 5px 10px;
+    margin: 0 2px;
+    cursor: pointer;
+}
+
+.page-numbers .page-number.active {
+    background-color: #ff628a;
+    color: white;
+    border-radius: 4px;
+}
+
+.pagination-info {
+    color: #666;
+}
+
+.page-size-selector {
+    width: 300px;
+    /* background-color: #ff6b6b; */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.page-size-selector select {
+    margin: auto;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}

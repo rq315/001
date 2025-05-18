@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>社团管理系统</title>
+    <link rel="stylesheet" href="css/all.css">
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/member.js"></script>
+    <script src="./js/logout.js"></script>
+</head>
+<body>
+    <div class="top">
+        <span class="top_text">管理成员</span>
+        <span class="logout">退出</span>
+    </div>
+    <span class="two">
+    <div class="menu">
+        <ul>
+            <li class="adminMenu"><a href="enterCI.html">录入社团信息</a></li>
+            <li class="adminMenu"><a href="activity.html">管理活动</a></li>
+            <li class="adminMenu"><a href="finance.html">管理经费</a></li>
+            <li class="adminMenu"><a href="member.html">管理成员</a></li>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="searchlist" style="margin-top: 10px;">
+            <div class="dropdown"  style="width:120px;">    
+                <p >成员角色:</p>
+                <select class="user_role" style="width:100px;height: 29px; ">
+                    <option  value="0">All</option>
+                    <option  value="1">User</option>
+                    <option  value="2">Administrator</option>
+                </select>     
+            </div>
+            <div class="dropdown" style="width:120px; ">    
+                <p>成员姓名：</p>
+                <input class="user_name" style="width:100px;height: 25px; " type="text"> 
+            </div>
+            <div class="searchbutton" style="width:120px; ">
+                <input class="searchBtn" style="width:80px;height: 35px;  " type="button" id="show" value="搜索" />
+            </div>
+
+            <button class="btn_publish" style="height: 35px;width: 100px;margin-left: 40px;">添加成员</button>
+
+        </div>
+        
+        <table class="table1">
+            <thead  class="thead1">
+                <tr>
+                    <th>姓名</th>
+                    <th>学号</th>
+                    <th>加入日期</th>
+                    <th>成员角色</th>
+                    <th>联系方式</th>
+                    <th>所属社团</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="tdcolor1">
+                    <td>12</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- 在表格下方添加分页控件 -->
+    <div class="pagination-container">
+        <div class="pagination-info" id="pageInfo">显示 0-0 条，共 0 条</div>
+        <div class="pagination-controls">
+            <button id="firstPage" class="page-btn" disabled>首页</button>
+            <button id="prevPage" class="page-btn" disabled>上一页</button>
+            <span id="pageNumbers" class="page-numbers">
+                <!-- 页码按钮将通过JavaScript动态生成 -->
+            </span>
+            <button id="nextPage" class="page-btn" disabled>下一页</button>
+            <button id="lastPage" class="page-btn" disabled>末页</button>
+        </div>
+        <div class="page-size-selector">
+            <label>每页显示:</label>
+            <select id="pageSize">
+                <option value="5">5条</option>
+                <option value="10" selected>10条</option>
+                <option value="20">20条</option>
+                <option value="50">50条</option>
+            </select>
+        </div>
+    </div>
+
+
+</body>
+</html>

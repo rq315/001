@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>社团管理系统</title>
+    <link rel="stylesheet" href="css/all.css">
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script src="./js/member_add.js"></script>
+    <script src="./js/logout.js"></script>
+</head>
+<body>
+    <div class="top">
+        <span class="deyail_text">添加新成员</span>
+        <span class="returnM">返回</span>
+    </div>
+    <div class="main">            
+        <form id="memberForm" class="memberbox">
+            <div class="form-group">
+                <label>姓名：</label>
+                <input type="text" class="form-control user_SelectName" required>
+            </div>
+            <div class="form-group">
+                <label>加入日期：</label>
+                <input type="date" class="form-control user_join_date" required>
+            </div>
+            <div class="form-group">
+                <label>联系电话：</label>
+                <input type="text" class="form-control user_phone">
+            </div>
+            <div class="form-group">
+                <label>角色：</label>
+                <select class="form-control user_SelectRole" required>
+                    <option value="">-- 请选择 --</option>
+                    <option value="1">User</option>
+                    <option value="2">Administrator</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>关联社团：</label>
+                <select class="form-control community_id"  name="user_belong_community_number" required>
+                    <option value="">-- 无关联社团 --</option>
+                    <!-- 动态加载活动选项 -->
+                </select>
+            </div>
+            <button type="submit" class="submit-btn">添加</button>
+        </form>
+    </div>
+</body>
+</html>

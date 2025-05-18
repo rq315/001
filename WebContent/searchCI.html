@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>社团管理系统</title>
+    <link rel="stylesheet" href="css/all.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/searchCI.js"></script>
+    <script src="./js/logout.js"></script>
+</head>
+<body>
+    <div class="top">
+        <span class="top_text">搜索社团信息</span>
+        <span class="logout">退出</span>
+    </div>
+    <span class="two">
+    <div class="menu">
+        <ul>
+            <li class="memberMenu"><a href="searchCI.html">搜索社团信息</a></li>
+            <li class="memberMenu"><a href="searchAI.html">搜索活动信息</a></li>
+        </ul>
+    </div>
+
+    <div class="main">
+        <div class="searchlist1">
+            <div class="search-input-group">
+                <label for="community_name">社团名称:</label>
+                <input type="text" id="community_name" class="search-input">
+            </div>
+            <div class="search-input-group" style="margin-left: 40px;">
+                <label for="community_type">社团类型:</label>
+                <input type="text" id="community_type" class="search-input">
+            </div>
+            <button class="searchBtn" style="height: 35px;width: 80px;margin-left: 40px;">搜索</button>
+        </div>
+    
+        <table class="table1">
+                <thead  class="thead1">
+                    <tr>
+                        <th>社团编号</th>
+                        <th>社团名称</th>
+                        <th>社团类型</th>
+                        <th>社团负责人</th>
+                        <th>负责人学号</th>
+                        <th>社团创立时间</th>
+                        <th>社团简介</th>
+                        <th>社团状态</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tdcolor1">
+                        <td>12</td>
+                        <td>12</td>
+                        <td>12</td>
+                        <td>12</td>
+                        <td>12</td>
+                        <td>12</td>
+                        <td>12</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                    </tr>
+                </tbody>
+            </table>
+        
+            <!-- 在表格下方添加分页控件 -->
+            <div class="pagination-container">
+                <div class="pagination-info" id="pageInfo">显示 0-0 条，共 0 条</div>
+                <div class="pagination-controls">
+                    <button id="firstPage" class="page-btn" disabled>首页</button>
+                    <button id="prevPage" class="page-btn" disabled>上一页</button>
+                    <span id="pageNumbers" class="page-numbers"></span>
+                    <button id="nextPage" class="page-btn" disabled>下一页</button>
+                    <button id="lastPage" class="page-btn" disabled>末页</button>
+                </div>
+                <div class="page-size-selector">
+                    <label>每页显示:</label>
+                    <select id="pageSize">
+                        <option value="5">5条</option>
+                        <option value="10" selected>10条</option>
+                        <option value="20">20条</option>
+                        <option value="50">50条</option>
+                    </select>
+                </div>
+            </div>
+    </div>
+    
+
+</body>
+</html>

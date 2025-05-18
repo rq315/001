@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>社团管理系统</title>
+    <link rel="stylesheet" href="css/all.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="./js/finance.js"></script>
+    <script src="./js/logout.js"></script>
+</head>
+<body>
+    <div class="top">
+        <span class="top_text">管理经费</span>
+        <span class="logout">退出</span>
+    </div>
+
+    <span class="two">
+    <div class="menu">
+        <ul>
+            <li class="adminMenu"><a href="enterCI.html">录入社团信息</a></li>
+            <li class="adminMenu"><a href="activity.html">管理活动</a></li>
+            <li class="adminMenu"><a href="finance.html">管理经费</a></li>
+            <li class="adminMenu"><a href="member.html">管理成员</a></li>
+        </ul>
+    </div>
+    <div class="main">
+
+        <div class="searchlist1">
+            <button class="btn_publish" style="height: 40px;width: 100px;margin-left: 40px;">记录新收支</button>
+        </div>
+
+        <table class="table1">
+            <thead  class="thead1">
+                <tr>
+                    <th>经费金额</th>
+                    <th>经费类型</th>
+                    <th>经费记录日期</th>
+                    <th>经费描述</th>
+                    <th>关联活动</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="tdcolor1">
+                    <td>12</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- 在表格下方添加分页控件 -->
+        <div class="pagination-container">
+            <div class="pagination-info" id="pageInfo">显示 0-0 条，共 0 条</div>
+            <div class="pagination-controls">
+                <button id="firstPage" class="page-btn" disabled>首页</button>
+                <button id="prevPage" class="page-btn" disabled>上一页</button>
+                <span id="pageNumbers" class="page-numbers">
+                    <!-- 页码按钮将通过JavaScript动态生成 -->
+                </span>
+                <button id="nextPage" class="page-btn" disabled>下一页</button>
+                <button id="lastPage" class="page-btn" disabled>末页</button>
+            </div>
+            <div class="page-size-selector">
+                <label>每页显示:</label>
+                <select id="pageSize">
+                    <option value="5">5条</option>
+                    <option value="10" selected>10条</option>
+                    <option value="20">20条</option>
+                    <option value="50">50条</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="sum">
+            <div>当前页小计: <span class="current-page-sum">0.00</span>元</div>
+            <div>共计:<span class="money">0.00</span>元</div>
+        </div>
+        
+    </div>
+</body>
+</html>
